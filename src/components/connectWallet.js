@@ -33,21 +33,6 @@ export const ConnectWallet = (props) => {
       setMsgText("You connected to metamask");
       setMsgType("info");
       setMsgOpen(true);
-      // if (chainId != 1) {
-      //   setMsgText('You need to switch Ethereum main network')
-      //   setMsgType('error')
-      //   setMsgOpen(true)
-      //   library.provider.request({
-      //     method: 'wallet_switchEthereumChain',
-      //     params: [{ chainId: '0x1' }]
-      //   })
-      //   .then(cb => {
-      //     console.log(cb)
-      //   })
-      //   .catch(err => {
-      //     console.log(err)
-      //   });
-      // }
     }
   }, [active, chainId, account]);
 
