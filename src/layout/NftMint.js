@@ -38,7 +38,6 @@ function NftMint() {
   const [msgText, setMsgText] = React.useState("");
   const [msgType, setMsgType] = React.useState("success");
   const [totalSupply, setTotalSupply] = React.useState(0);
-  const [whiteLists, setWhiteLists] = React.useState(0);
   const [hour, setHour] = React.useState(0);
   const [day, setDay] = React.useState(0);
   const [minute, setMinute] = React.useState(0);
@@ -73,13 +72,6 @@ function NftMint() {
     const contract = new web3.eth.Contract(nftContractABI.abi, nftContractAddress);
     const total = parseInt(await contract.methods.totalSupply().call());
     setTotalSupply(total);
-  }
-
-  const getWhitelistedCount = async () => {
-    const web3 = new Web3(library.provider);
-    const contract = new web3.eth.Contract(nftContractABI.abi, nftContractAddress);
-    const total = parseInt(await contract.methods.totalSupply().call());
-    setWhiteLists(total);
   }
 
   const mintNFT = async () => {
@@ -129,7 +121,6 @@ function NftMint() {
       <div className="flex justify-center gap-x-5">
         <Info title="Total Minted" value={totalSupply}/>
         <Info title="Total Nfts" value="150"/>
-        <Info title="Total Listed" value={whiteLists}/>
         <Info title="Total WhiteList" value="150"/>
       </div>
 
