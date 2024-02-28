@@ -7,12 +7,12 @@ import reportWebVitals from "./reportWebVitals";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { mainnet, base, bsc, zkSync } from "wagmi/chains";
+import { mainnet, base, bsc, zkSync, bscTestnet } from "wagmi/chains";
 import { alchemyProvider } from "wagmi/providers/alchemy";
 import { publicProvider } from "wagmi/providers/public";
 
 const { chains, publicClient } = configureChains(
-  [mainnet, bsc],
+  [bscTestnet, mainnet, bsc],
   [
     alchemyProvider({ apiKey: "ekZhZsGjfWuK39pYW_YXSEcRKDN8amSN" }),
     publicProvider(),
@@ -43,7 +43,3 @@ root.render(
 );
 
 reportWebVitals();
-
-
-
-className = `{flex item-center text-[12px] ${inter.className}}`

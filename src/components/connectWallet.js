@@ -41,7 +41,7 @@ export const ConnectWallet = (props) => {
       {!active ? (
         <div
           onClick={() => connectMetamask()}
-          className="my-5 relative cursor-pointer rounded-3xl lg:w-[175px] w-[50px] font-bold text-[14px] tracking-widest h-[50px] border border-[#aBa6B7] justify-center items-center flex text-[#DBD6B7] shadow-md shadow-[#aBa6B7]"
+          className="my-5 relative cursor-pointer rounded-3xl lg:w-[175px] w-[50px] font-bold text-[14px] tracking-widest h-[50px] border border-cyan-200 justify-center items-center flex text-[#DBD6B7] shadow-md shadow-[#aBa6B7]"
         >
           <span className="lg:visible invisible absolute text-center flex justify-center items-center">
             <img src="/metaicon.png" width="30"></img> ConnectWallet
