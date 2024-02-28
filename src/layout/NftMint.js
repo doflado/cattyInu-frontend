@@ -14,6 +14,11 @@ const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
+const formatValue = (value) => {
+  if(value < 10) return `0${value}`;
+  return value;
+}
+
 const Info = ({title, value}) => {
   return (
     <div className="w-[200px] items-center px-4 text-white h-[70px] rounded-full border border-cyan-300 flex justify-between">
@@ -22,6 +27,8 @@ const Info = ({title, value}) => {
     </div>
   )
 }
+
+const timer = 0;
 
 function NftMint() {
   // const { library } = useAccount();
@@ -32,11 +39,34 @@ function NftMint() {
   const [msgType, setMsgType] = React.useState("success");
   const [totalSupply, setTotalSupply] = React.useState(0);
   const [whiteLists, setWhiteLists] = React.useState(0);
+  const [hour, setHour] = React.useState(0);
+  const [day, setDay] = React.useState(0);
+  const [minute, setMinute] = React.useState(0);
+  const [second, setSecond] = React.useState(0);
   useEffect(()=>{
-    if(!library) return;
     getTotalSupply();
     getWhitelistedCount();
   },[library]);
+
+  useEffect(()=>{
+    setInterval(()=>{
+      const currentTime = new Date();
+      // Set the target time to 13:00 UTC on March 5th, 2024
+      const targetTime = new Date("2024-03-05T13:00:00Z");
+
+      // Calculate the difference in seconds
+      if(targetTime > currentTime)
+      {
+        setHour(0); setDay(0); setMinute(0); setSecond(0); return;
+      }
+      const differenceInSeconds = Math.floor((currentTime - targetTime) / 1000);
+      console.log(differenceInSeconds);
+      setDay(Math.floor(differenceInSeconds / 3600 / 24));
+      setHour(Math.floor(differenceInSeconds % (3600*24) / 3600));
+      setMinute(Math.floor(differenceInSeconds % 3600 / 60));
+      setSecond(differenceInSeconds % 60);
+    }, 1000)
+  }, []);
 
   const getTotalSupply = async () => {
     const web3 = new Web3(library.provider);
@@ -88,10 +118,10 @@ function NftMint() {
           <span className="text-gray-400 font-semibold text-[18px]">13:00 05/03/2024 (UTC)</span>
         </div>
         <div className="flex gap-x-3 items-center text-white"> <br/>
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">00</span>Days : &nbsp;&nbsp;
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">00</span>Hours : &nbsp;&nbsp;
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">00</span>Minutes : &nbsp;&nbsp;
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">00</span>Seconds  
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(day)}</span>Days : &nbsp;&nbsp;
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(hour)}</span>Hours : &nbsp;&nbsp;
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(minute)}</span>Minutes : &nbsp;&nbsp;
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(second)}</span>Seconds  
 
         </div>
       </div>
