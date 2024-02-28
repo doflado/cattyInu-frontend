@@ -28,7 +28,6 @@ const Info = ({title, value}) => {
   )
 }
 
-const timer = 0;
 
 function NftMint() {
   // const { library } = useAccount();
