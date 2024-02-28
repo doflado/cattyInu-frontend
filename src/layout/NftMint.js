@@ -44,7 +44,6 @@ function NftMint() {
   const [second, setSecond] = React.useState(0);
   useEffect(()=>{
     getTotalSupply();
-    getWhitelistedCount();
   },[library]);
 
   useEffect(()=>{
