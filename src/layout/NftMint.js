@@ -103,21 +103,21 @@ function NftMint() {
   return (
     <div className="flex w-full items-center pt-[170px] gap-y-20 min-h-[100vh] bg-black flex-col">
       <div className="flex items-center flex-col gap-y-5">
-        <div className="text-white font-extrabold text-[70px]"> COUNTDOWN TIMER</div>
+        <div className="text-white font-extrabold text-[50px] lg:text-[70px] text-center"> COUNTDOWN TIMER</div>
         <div>
           <span className="text-white font-bold text-[25px]">start in: &nbsp; &nbsp;</span>
           <span className="text-gray-400 font-semibold text-[18px]">13:00 05/03/2024 (UTC)</span>
         </div>
         <div className="flex gap-x-3 items-center text-white"> <br/>
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(day)}</span>Days : &nbsp;&nbsp;
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(hour)}</span>Hours : &nbsp;&nbsp;
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(minute)}</span>Minutes : &nbsp;&nbsp;
-          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(second)}</span>Seconds  
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(day)}</span><div className="hidden md:visible">Days</div> : &nbsp;&nbsp;
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(hour)}</span><div className="hidden md:visible">Hours</div> : &nbsp;&nbsp;
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(minute)}</span><div className="hidden md:visible">Minutes</div> : &nbsp;&nbsp;
+          <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(second)}</span><div className="hidden md:visible">Seconds</div>  
 
         </div>
       </div>
       
-      <div className="flex justify-center gap-x-5">
+      <div className="flex justify-center gap-x-5 flex-col md:flex-row gap-y-4">
         <Info title="Total Minted" value={totalSupply}/>
         <Info title="Total Nfts" value="150"/>
         <Info title="Total WhiteList" value="150"/>
