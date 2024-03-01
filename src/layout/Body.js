@@ -2,7 +2,7 @@ import NftMint from "./NftMint";
 
 const Body = () => {
   return (
-    <div className="flex px-[50px] xl:px-[250px] lg:py-[150px] py-[80px] justify-center flex-col gap-y-20 text-white">
+    <div className="flex px-[50px] xl:px-[200px] lg:py-[150px] py-[80px] justify-center flex-col gap-y-20 text-white">
       <div className="flex flex-col lg:flex-row justify-between gap-x-20 items-center">
         <img src="./pic.png" width={500} height={500} />
         <div className="lg:w-[800px] flex flex-col gap-y-10">
