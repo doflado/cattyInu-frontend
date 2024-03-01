@@ -2,7 +2,7 @@ import NftMint from "./NftMint";
 
 const Body = () => {
   return (
-    <div className="flex px-[50px] xl:px-[150px] lg:py-[150px] py-[50px] justify-center flex-col gap-y-20 font-serif text-white">
+    <div className="flex px-[50px] xl:px-[250px] lg:py-[150px] py-[80px] justify-center flex-col gap-y-20 text-white">
       <div className="flex flex-col lg:flex-row justify-between gap-x-20 items-center">
         <img src="./pic.png" width={500} height={500} />
         <div className="lg:w-[800px] flex flex-col gap-y-10">
@@ -11,14 +11,14 @@ const Body = () => {
             Catty Inu is sweeping the whole memecoins
           </div>
           <div className="flex gap-x-7">
-               <a href="#" className="w-[150px] text-center px-5 pt-1 pb-3 font-semibold border-2 border-white shadow-md shadow-white rounded-full bg-yellow-500">Telegram</a>
-               <a href="#" className="w-[150px] text-center px-5 pt-1 pb-3 font-semibold border-2 border-white shadow-md shadow-white rounded-full bg-yellow-500">Twitter</a>
+               <a href="#" className="w-[150px] text-center px-5 py-2 font-semibold shadow-md shadow-gray-300 rounded-full bg-[#4157A4]">Telegram</a>
+               <a href="#" className="w-[150px] text-center px-5 py-2 font-semibold shadow-md shadow-gray-300 rounded-full bg-[#4157A4]">Twitter</a>
           </div>
         </div>
       </div>
       <div className="flex flex-col gap-y-5">
-        <div className="lg:text-[60px] text-[40px] font-bold">About Catty Inu</div>
-        <div className="lg:text-[40px] text-[30px] tracking-wider text-yellow-100">
+        <div className="lg:text-[60px] text-[40px] font-bold text-center">About Catty Inu</div>
+        <div className="lg:text-[40px] text-[20px] tracking-wider text-yellow-100">
           Catty Inu will be developing NFTs of puppies that introduce the
           concepts of growth and decay into the solidity smart contracts. The
           Catty inu NFTs will be custom made game assets where you will be able
@@ -49,33 +49,33 @@ const Body = () => {
       </div>
 
       {/* Roadmap */}
-      <div className="flex flex-col gap-y-10">
+      <div className="flex flex-col gap-y-10 bg-[#121D47] py-10 rounded-2xl">
         <div className="text-[70px] text-center font-bold">Roadmap</div>
         <div className="flex gap-x-[80px] flex-wrap justify-center gap-y-[50px]">
           <div className="w-[300px]">
             <div className="text-[45px] uppercase flex flex-col mb-5">Phase 1:</div>
-            <div className="text-[30px] tracking-wider text-yellow-100">
+            <div className="lg:text-[30px] text-[20px] tracking-wider text-yellow-100">
               Website build Social build Contract build NFTs relase Presale
               Pinksale Launch PancakeSwap First CEX
             </div>
           </div>
           <div className="w-[300px]">
             <div className="text-[45px] uppercase flex flex-col mb-5">Phase 2:</div>
-            <div className="text-[30px] tracking-wider text-yellow-100">
+            <div className="lg:text-[30px] text-[20px] tracking-wider text-yellow-100">
               Second CEX Launch NFT TofuNFT Certik Audit 2000 holders
               Coinmarketcap Coingecko
             </div>
           </div>
           <div className="w-[300px]">
             <div className="text-[45px] uppercase flex flex-col mb-5">Phase 3:</div>
-            <div className="text-[30px] tracking-wider text-yellow-100">
+            <div className="lg:text-[30px] text-[20px] tracking-wider text-yellow-100">
               5000 holders Third CEX Launch DAPP Launch Staking Pool Partnership
               with MM price
             </div>
           </div>
           <div className="w-[300px]">
             <div className="text-[45px] uppercase flex flex-col mb-5">Phase 4:</div>
-            <div className="text-[30px] tracking-wider text-yellow-100">
+            <div className="lg:text-[30px] text-[20px] tracking-wider text-yellow-100">
               BSCScan Logo update Telegram 20K+ members TOP MEME project
               partnership 10,000 Holders Banner at New York city
             </div>
