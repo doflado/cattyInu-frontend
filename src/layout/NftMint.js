@@ -21,9 +21,9 @@ const formatValue = (value) => {
 
 const Info = ({title, value}) => {
   return (
-    <div className="w-[200px] items-center px-4 text-white h-[70px] rounded-full border border-cyan-300 flex justify-between">
-      <div className="pr-3 border-r">{title}</div>
-      <div className="font-semibold text-[25px] pr-1">{value}</div>
+    <div className="w-[230px] items-center px-4 text-white h-[70px] rounded-full border border-cyan-300 flex justify-between">
+      <div className="pr-3 border-r font-semibold">{title}</div>
+      <div className="font-semibold text-[28px] pr-1">{value}</div>
     </div>
   )
 }
@@ -101,12 +101,12 @@ function NftMint() {
   };
 
   return (
-    <div className="flex w-full items-center pt-[170px] gap-y-20 min-h-[100vh] bg-black flex-col">
+    <div className="flex w-full items-center pt-[70px] gap-y-20 flex-col">
       <div className="flex items-center flex-col gap-y-5">
         <div className="text-white font-extrabold text-[50px] lg:text-[70px] text-center"> COUNTDOWN TIMER</div>
         <div>
-          <span className="text-white font-bold text-[25px]">start in: &nbsp; &nbsp;</span>
-          <span className="text-gray-400 font-semibold text-[18px]">13:00 05/03/2024 (UTC)</span>
+          <span className="text-white font-bold text-[35px]">start in: &nbsp; &nbsp;</span>
+          <span className="text-gray-400 font-semibold text-[24px]">13:00 05/03/2024 (UTC)</span>
         </div>
         <div className="flex gap-x-3 items-center text-white"> <br/>
           <span className="p-4 rounded-3xl border-cyan-200 border text-white font-semibold text-[20px]">{formatValue(day)}</span><div className="hidden md:visible">Days</div> : &nbsp;&nbsp;
