@@ -53,7 +53,7 @@ export const ConnectWallet = (props) => {
       ) : (
         <div
           onClick={() => disconnectMetamask()}
-          className="my-5 relative cursor-pointer rounded-3xl lg:w-[175px] w-[50px] font-bold text-[14px] tracking-widest h-[50px] border border-[#03ff10] justify-center items-center flex text-[#DBD6B7] shadow-md shadow-[#4dff76]"
+          className="my-5 relative cursor-pointer rounded-3xl lg:w-[175px] w-[50px] font-bold text-[14px] tracking-widest h-[50px] border border-[#fff703] justify-center items-center flex text-[#DBD6B7] shadow-md shadow-[#fff703]"
         >
           <span className="lg:visible invisible absolute flex  justify-center items-center">
             <img src="/metaicon.png" width="30"></img>DISCONNECT
